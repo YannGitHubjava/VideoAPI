@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="omdb_response" id="omdb">
+    {% for title in result['OMDB']  %}
+
+        {% if title['Image']|string() == 'N/A' %}
+            <p>Title: {{ title['Title'] }}</p>
+
+            <p>No Image loaded!!</p>
+
+        {% else %}
+            <div>
+                <img id="photo"
+                     onload='load(this.id)'
+                     src=" {{ title['Image']}}"
+                     alt="Somthing">
+            </div>
+            <p>Title: {{ title['Title'] }}
+
+
+        {% endif %}
+
+    {% endfor %}
+</div>
+
+
+
+<div class="vimeo_rep" id="vimeoPlay">
+
+    {% for item in result['VIMEO']['Vimeo'] %}
+
+        {% if item %}
+
+            <div data-vimeo-url="{{ item['link'] }}" data-vimeo-width="420" id="{{ item['name'] }}" ></div>
+
+
+
+            <script>
+                 var playerTwoPlayer = new Vimeo.Player("{{ item['name'] }}");
+                 playerTwoPlayer.on('play', function() {
+                 console.log('played the player 2.0 video!');
+            });
+
+            </script>
+
+            <p>Title: {{ item['name'] }}</p>
+
+        {% endif %}
+
+    {% endfor %}
+
+
+</div>
+
+
+
+{% endblock %}

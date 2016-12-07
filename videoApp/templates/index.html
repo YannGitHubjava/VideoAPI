@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+    <div id="test">
+
+        <br><br>
+        <form action="{{ url_for('search') }}" method="post">
+            <input type="text" name="keyword" placeholder="">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div id="test2">
+        <br><br>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+
+
+
+</body>
+</html>

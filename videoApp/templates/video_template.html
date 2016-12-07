@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Video Title will be here</title>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+
+    <div class="vimeo_rep" id="vimeoPlay">
+
+     <p>Title: {{ result['VIMEO']['Vimeo']['name'] }}</p>
+
+     <div data-vimeo-url="{{ result['VIMEO]['Vimeo']['link'] }}" data-vimeo-width="420" id="player" ></div>
+
+
+     <script>
+         localStorage.setItem('vimeoPlay', document.getElementById('vimeoPlay'));
+         var playerTwoPlayer = new Vimeo.Player('player');
+         playerTwoPlayer.on('play', function() {
+         console.log('played the player 2.0 video!');
+    });
+     </script>
+
+
+
+</div>
+
+
+</body>
+</html>
