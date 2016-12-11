@@ -36,9 +36,11 @@ class Omdb_Movie:
 
         for item in video_result:
 
-            title = item['Title']
-            image_url = item['Poster']
-            movie_result.append({'Title': title, 'Image': image_url})
+            if item['Poster'] != 'N/A':
+
+                title = item['Title']
+                image_url = item['Poster']
+                movie_result.append({'Title': title, 'Image': image_url})
 
         return movie_result
 
