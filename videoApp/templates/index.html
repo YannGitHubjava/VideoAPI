@@ -16,62 +16,87 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-
-
-
-
     <style type="text/css">
+        /* jumbotron styling*/
 
+        div#jumbo.jumbotron{
+            width: 100%;
+            padding-top: 20px;
 
+        }
 
-        .carousel-inner > .item > div,
-        .carousel-inner > .item > a > div {
-            margin: 0 auto;
+        /* Carousel image centered*/
+
+        iframe {
+            width: 100% ;
+            height: 450px;
+
         }
 
 
 
+
+
+        /* vimeo controled section height */
+
+        div#myrow.row {
+            height: 500px;
+        }
+
+
+
+
+        /* image thumbnails controled row height */
+
+        div#imageThumb {
+            width : 300px;
+            height : 400px;
+        }
+
     </style>
+
 
 </head>
 <body>
 
+    <div class="container">
 
-    <div id="container">
-        <div class="row row-offcanvas row-offcanvas-left">
+        <div class="row row-offcanvas row-offcanvas-center">
             <div class="sidebar-offcanvas">
-                <div class="navar nabar-default">
-                    <a class="navbar-brand hidden-md" href="#">VIDEO APP</a>
-                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <nav class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">APP INFO</a></li>
-                            <li><a href="#">CONTACT</a><li>
-                        </ul>
+                <div class="col-md-12">
+                    <div class="jumbotron text-center" id="jumbo">
+                        <div class="navar nabar-default">
+                            <a class="navbar-brand hidden-md" href="#">VIDEO APP</a>
+                            <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <nav class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#">HOME</a></li>
+                                    <li><a href="#">APP INFO</a></li>
+                                    <li><a href="#">CONTACT</a><li>
+                                </ul>
 
 
 
-                        <form class="navbar-form pull-right" action="{{ url_for('search') }}" method="post">
-                            <input type="text" name="keyword" placeholder="">
-                            <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </form>
+                                <form class="navbar-form pull-right" action="{{ url_for('search') }}" method="post">
+                                    <input type="text" name="keyword" placeholder="">
+                                    <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </form>
 
 
-
-                    </nav>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div >
-        <br>
+    <div>
 
         {% block content %}
 

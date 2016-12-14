@@ -21,7 +21,7 @@ def search():
     api_clients_responses = api_clients.search(keyword)
 
 
-    return render_template('result.html', result=api_clients_responses)
+    return render_template('result.html', result=api_clients_responses, search = keyword)
 
 
 

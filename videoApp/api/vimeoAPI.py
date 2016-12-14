@@ -29,7 +29,7 @@ class vimeo_Movie:
 
         video_list = []
 
-        count = 3
+        count = 10
         for item in video_data:
 
             if count >= 0 :

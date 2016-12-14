@@ -42,6 +42,7 @@ class Omdb_Movie:
                 image_url = item['Poster']
                 movie_result.append({'Title': title, 'Image': image_url})
 
+
         return movie_result
 
 if __name__ == "__main__":
