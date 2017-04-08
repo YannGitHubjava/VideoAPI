@@ -1,1 +1,1 @@
-web: gunicorn VideoAPI:app
+web: gunicorn test_gunicorn.wsgi:application
