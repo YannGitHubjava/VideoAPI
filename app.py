@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request
 
+import os
+
+
 # from videoApp.api.omdbAPI import Omdb_Movie
 # from videoApp.api.vimeoAPI import vimeo_Movie
 
@@ -28,4 +31,8 @@ def search():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
+
+    #TODO
