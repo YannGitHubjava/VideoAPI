@@ -1,1 +1,1 @@
-web: gunicorn videoApp.myvideo:app --log-file
+web: gunicorn videoApp.myvideo:app
