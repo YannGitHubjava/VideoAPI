@@ -1,1 +1,1 @@
-web: gunicorn test_gunicorn.wsgi:application
+web: gunicorn videoApp:app --workers 1
