@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request
 
-import os
+#import os
 
 
 # from videoApp.api.omdbAPI import Omdb_Movie
 # from videoApp.api.vimeoAPI import vimeo_Movie
 
-from videoApp.api.api_manager import API_Manager
+#from videoApp.api.api_manager import API_Manager
 app = Flask(__name__)
 
 @app.route('/')
