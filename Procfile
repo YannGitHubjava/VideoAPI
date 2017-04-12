@@ -1,1 +1,1 @@
-web: gunicorn videoApp:app --workers 1
+web: gunicorn videoApp:app
