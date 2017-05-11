@@ -2,7 +2,6 @@ import requests
 import vimeo
 from videoApp.keys import keys as k
 import pprint
-import re
 
 
 class vimeo_Movie:
